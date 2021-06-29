@@ -1,12 +1,12 @@
 class AuthenticationController < ApplicationController
- 
+
   def authenticate
     service = AuthenticateUserService.call(params[:username], params[:password])
  
-    if command.success?
-      render json: { auth_token: command.result }
+    if service.success?
+      render json: { auth_token: service.result }
     else
-      render json: { error: command.errors }, status: :unauthorized
+      render json: { error: service.errors }, status: :unauthorized
     end
   end
  end
