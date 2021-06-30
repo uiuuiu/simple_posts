@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version: 3.0.1
 
-Things you may want to cover:
+* Rails version: 6.1.4
 
-* Ruby version
+* Database: Sqlite
 
-* System dependencies
+## Setup
 
-* Configuration
+1. Run `bundle install`
+2. Run `rails db:create db:migrate db:seed`
+3. Run `rails s` for development
 
-* Database creation
+## Testing
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Run `rspec` to run all tests
+2. Run `rspec path_to_file` to run a specific test file
