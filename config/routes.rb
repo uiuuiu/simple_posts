@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   post 'authenticate', to: 'authentication#authenticate'
   post 'signup', to: 'signup#create'
   
-  scope :me, module: 'private' do
+  namespace :me, module: 'private' do
     resources :posts
   end
 end
